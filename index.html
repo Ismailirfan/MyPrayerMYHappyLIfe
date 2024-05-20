@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
@@ -47,7 +47,7 @@ body {
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">  
   <!-- Links (sit on top) -->
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar">
+  <nav class="navbar navbar-expand-sm bg-dark fixed-top navbar-dark navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Logo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -62,7 +62,7 @@ body {
         <a href="#about" class="nav-link">ABOUT</a>
       </li>
       <li class="dropdown nav-item mx-5 px-5">
-  <a href="#setup" id="Contentdata"  class="nav-link" data-bs-toggle="dropdown" data-bs-trigger="hover">
+  <a href="#service" id="Contentdata"  class="nav-link" data-bs-toggle="dropdown" data-bs-trigger="hover">
     SERVICES
   </a>
   <ul class="dropdown-menu" id="popoverContent">
@@ -1925,14 +1925,7 @@ body {
   <p>Powered by <a href="https://www.facebook.com/people/My-Prayer-My-Happy-Life/61559404443657/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Humanity Good Luck</a></p>
 </footer>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// PopHOver
-  //         $(document).ready(function() {
-  // $('#Contentdata').hover(function(){('#popoverContent').toggle()})
-        // });
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'))
           var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -1960,36 +1953,5 @@ document.getElementById("myLink").click();
 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<!-- index.html -->
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display Data</title>
-</head>
-<body>
-  <p>It's a data container</p>
-  <div id="data-container"></div>
-
-  <script>
-    // Fetch data from the API endpoint
-    fetch('/main')
-      .then(response => response.json())
-      .then(data => {
-        // Process and display the data in the HTML element
-        const dataContainer = document.getElementById('data-container');
-        data.forEach(item => {
-          const div = document.createElement('div');
-          div.textContent = JSON.stringify(item);
-          dataContainer.appendChild(div);
-        });
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  </script>
-</body>
-</html>-->
