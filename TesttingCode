@@ -1,3 +1,4 @@
+<!--model box-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,7 @@
     </div>
   </div>
 </div>
-
+<!-- popover with specific elements-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,5 +69,61 @@ $(document).ready(function(){
 </body>
 </html>
 
+</body>
+</html>
+<!--popover on mouse-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="showPopoverButton">showPopoverButton</button>
+    <button id="hidePopoverButton">hidePopoverButton</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $(document).ready(function() {
+    $(document).click(function(event) {
+         var clickX = event.pageX;
+         var clickY = event.pageY;
+
+        // Specific position coordinates (replace with your desired values)
+        var positionX = clickX;  // Pixels from the left edge of the document/window
+        var positionY = clickY;   // Pixels from the top edge of the document/window
+        console.log("Mouse clicked at: X - " + clickX + ", Y - " + clickY);
+        // Popover content (replace with your HTML or text)
+        var popoverContent = "This is a popover at a specific position.";
+      
+        // Create a popover element dynamically
+        var popover = $('<div class="custom-popover">' + popoverContent + '</div>');
+      
+        // Set the popover's position using CSS
+        popover.css({
+          position: 'absolute',
+          left: positionX + 'px',
+          top: positionY + 'px',
+          padding: '10px',
+          background: '#fff',
+          border: '1px solid #ccc',
+          borderRadius: '5px',
+          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)'
+        });
+      
+        // Append the popover to the body (or a specific container if needed)
+        $('body').append(popover);
+
+        // Optional: Show/hide the popover on specific events (e.g., click a button)
+        $('#showPopoverButton').click(function() {
+          popover.show();
+        });
+      
+        $('#hidePopoverButton').click(function() {
+          popover.hide();
+        });
+    })
+    });
+      </script>
 </body>
 </html>
