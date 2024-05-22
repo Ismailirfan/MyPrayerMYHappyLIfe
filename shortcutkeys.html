@@ -20,8 +20,8 @@
       </a>
     </div>
 
-    <div id="Manual" class="w3-container menu w3-padding-48 w3-card">
-                <h5><span class="w3-tag w3-wide">Tip:-</span> Utilize Ctrl + F on your keyboard to quickly locate the requirement you need.
+    <div id="Manual" class="w3-container menu w3-padding-48 w3-card active">
+                <h5><span class="w3-tag w3-wide">Tip:-</span> Utilize <kbd>Ctrl + F</kbd> on your keyboard to quickly locate the requirement you need.
 			This shortcut simplifies searching, saving you time and effort.</h5>
       <div id="accordion" class="accordion">
         <div class="card">
@@ -1747,7 +1747,7 @@
                     </div>                                                                
     <div id="Automatic" class="w3-container menu w3-padding-48 w3-card">
       Do you like to accept our automatic services
-      <button type="button" class="btn btn-success" id="automaticAccept" data-bs-toggle="modal" data-bs-target="#myModal" >Accept</button>
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" >Accept</button>
       <button type="button" class="btn btn-danger" data-bs-target="#Manual">Reject</button>
     </div>  
 	<!--<img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">-->
@@ -1755,11 +1755,7 @@
 </div>
 
 <script>
-$(document).ready(function(){
-  $("#automaticAccept").click(function(){
     $("body").load("Services.html");
-  });
-});
 </script>
 
 </div>
