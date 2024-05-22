@@ -87,3 +87,69 @@ pause
 </body>
     </html>
           <!---Bootstrap Accordion collapsible end --->
+
+<!---Windows Accordion collapsible with batch program in model box--->
+@echo off
+powershell -File show_services.ps1
+pause
+
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
+
+# Create the main form
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "Cloud Services Introduction"
+$form.Size = New-Object System.Drawing.Size(400, 450)
+$form.StartPosition = "CenterScreen"
+
+# Create the Tab Control (acting as an accordion)
+$tabControl = New-Object System.Windows.Forms.TabControl
+$tabControl.Dock = [System.Windows.Forms.DockStyle]::Fill
+
+# Function to add tabs
+function Add-Tab {
+    param (
+        [string]$title,
+        [string]$content
+    )
+    $tabPage = New-Object System.Windows.Forms.TabPage
+    $tabPage.Text = $title
+    $label = New-Object System.Windows.Forms.Label
+    $label.Text = $content
+    $label.Dock = [System.Windows.Forms.DockStyle]::Fill
+    $label.TextAlign = [System.Drawing.ContentAlignment]::MiddleCenter
+    $tabPage.Controls.Add($label)
+    $tabControl.TabPages.Add($tabPage)
+}
+
+# Add tabs (simulating accordion sections)
+Add-Tab -title "Restore Deleted Files" -content "Restore all deleted files in the recycle bin through cloud services, both automatically and manually, to prevent system data loss."
+Add-Tab -title "Store App Data for Speed" -content "Reserve cloud services to store app_data folder or temporary files, making the system faster automatically and manually."
+Add-Tab -title "Shortcut Keys for Balance" -content "Implement shortcut keys through cloud services, both automatically and manually, to balance equity between human beings and technology."
+
+# Add the tab control to the form
+$form.Controls.Add($tabControl)
+
+# Add Accept button
+$acceptButton = New-Object System.Windows.Forms.Button
+$acceptButton.Text = "Accept"
+$acceptButton.Dock = [System.Windows.Forms.DockStyle]::Bottom
+$acceptButton.Add_Click({
+    [System.Windows.Forms.MessageBox]::Show("You have accepted the cloud services.")
+    $form.Close()
+})
+$form.Controls.Add($acceptButton)
+
+# Add Close button
+$closeButton = New-Object System.Windows.Forms.Button
+$closeButton.Text = "Close"
+$closeButton.Dock = [System.Windows.Forms.DockStyle]::Bottom
+$closeButton.Add_Click({
+    $form.Close()
+})
+$form.Controls.Add($closeButton)
+
+# Show the form
+$form.ShowDialog()
+
+<!--- window Accordion collapsible end --->
