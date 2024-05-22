@@ -147,7 +147,7 @@ body {
 
 <!-- Menu Container -->
 <div id="service">
-  <div id="div1"></div>
+  <div id="Shortcutkeys"></div>
 </div>
 <!-- Menu Container End-->
 
@@ -184,7 +184,7 @@ body {
 
 <script>
     $.ajax({url: "shortcutkeys.html", success: function(result){
-      $("#div1").html(result);
+      $("#Shortcutkeys").html(result);
     }});
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'))
