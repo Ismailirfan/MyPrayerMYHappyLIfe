@@ -147,7 +147,9 @@ body {
 
 <!-- Menu Container -->
 <div id="service">
-  <div id="Shortcutkeys"></div>
+  <div id="Shortcutkeys">
+  </div>
+<div id="div1"></div>
 </div>
 <!-- Menu Container End-->
 
@@ -185,7 +187,7 @@ body {
 <script>
      $("#Shortcutkeys").load("shortcutkeys.html", function() {
     // Callback function after loading file1.txt
-    $("body").load("Services.html", function() {
+    $("#div1").load("Services.html", function() {
     //   // Callback function after loading file2.txt (optional)
    console.log("Both files loaded!");
     });
