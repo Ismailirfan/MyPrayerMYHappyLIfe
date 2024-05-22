@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!--Services container-->
 <div class="w3-container" id="service">
   <div class="w3-content" style="max-width:700px">
@@ -1744,13 +1745,21 @@
                         </div>                                                                
     <div id="Automatic" class="w3-container menu w3-padding-48 w3-card">
       Do you like to accept our automatic services
-      <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
-      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
+      <button type="button" class="btn btn-success" id="automaticAccept">Accept</button>
+      <button type="button" class="btn btn-danger" id="Manual">Reject</button>
+	    <div id="div1"></div>
     </div>  
 	<!--<img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">-->
   </div>
 </div>
 
+<script>
+$(document).ready(function(){
+  $("#automaticAccept").click(function(){
+    $("#div1").load("Services.html");
+  });
+});
+</script>
 
 </div>
 </div>
