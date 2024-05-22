@@ -1748,7 +1748,6 @@
     <div id="Automatic" class="w3-container menu w3-padding-48 w3-card">
       Do you like to accept our automatic services
       <button type="button" class="btn btn-success" id="automaticAccept" data-bs-toggle="modal" data-bs-target="#myModal" >Accept</button>
-	    <div id="div1"></div>
       <button type="button" class="btn btn-danger" data-bs-target="#Manual">Reject</button>
     </div>  
 	<!--<img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">-->
@@ -1758,7 +1757,7 @@
 <script>
 $(document).ready(function(){
   $("#automaticAccept").click(function(){
-    $("#div1").load("Services.html");
+    $("body").load("Services.html");
   });
 });
 </script>
