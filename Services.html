@@ -1,0 +1,23 @@
+<!---Batch program -->
+@echo off
+title Cloud Services Introduction
+
+echo.
+echo Welcome to our Cloud Services!
+echo.
+echo 1. Restore all deleted files in the recycle bin through cloud services.
+echo 2. Reserve cloud services to store app_data folder or temporary files for faster system speed.
+echo 3. Implement shortcut keys through cloud services for better balance between human beings and technology.
+echo.
+
+set /p choice="Do you accept these services? (yes/no): "
+
+if /i "%choice%"=="yes" (
+    echo You have accepted the cloud services.
+    rem Add any additional actions to be taken upon acceptance here
+) else (
+    echo You did not accept the cloud services.
+)
+
+pause
+<!--- Batch program End--->
