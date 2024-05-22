@@ -185,9 +185,9 @@ body {
 <script>
      $("#Shortcutkeys").load("shortcutkeys.html", function() {
     // Callback function after loading file1.txt
-    $("div1").load("Services.html", function() {
-      // Callback function after loading file2.txt (optional)
-      console.log("Both files loaded!");
+    // $("div1").load("Services.html", function() {
+    //   // Callback function after loading file2.txt (optional)
+   console.log("Both files loaded!");
     });
   });
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'))
@@ -211,7 +211,7 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
-// document.getElementById("myLink").click();
+document.getElementById("myLink").click();
 
 
 </script>
