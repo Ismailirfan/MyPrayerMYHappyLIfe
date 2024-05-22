@@ -146,8 +146,7 @@ body {
 </div>
 
 <!-- Menu Container -->
-<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-<button id="button">Get External Content</button>
+<div id="div1"></div>
 <!-- <div class="w3-container" id="service">
   <div class="w3-content" style="max-width:700px">
  
@@ -1930,13 +1929,9 @@ body {
 </footer>
 
 <script>
-$(document).ready(function(){
-  $("#button").click(function(){
     $.ajax({url: "shortcutkeys.html", success: function(result){
       $("#div1").html(result);
     }});
-  });
-});
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'))
           var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
