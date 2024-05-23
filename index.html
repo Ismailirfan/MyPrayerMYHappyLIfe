@@ -151,7 +151,6 @@ body {
 <div id="service">
   <div id="Shortcutkeys">
   </div>
-<div id="div1"></div>
 </div>
 <!-- Menu Container End-->
 
@@ -224,9 +223,7 @@ body {
   $.ajax({url: "shortcutkeys.html", success: function(result){
       $("#Shortcutkeys").html(result);
     }});
-	$.ajax({url: "Service.html", success: function(result){
-      $("#div1").html(result);
-    }});
+  
  // $.ajax({
  //   url: 'shortcutkeys.html',
  //   dataType: 'html',
