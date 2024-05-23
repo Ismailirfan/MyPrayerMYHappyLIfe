@@ -220,21 +220,26 @@ body {
 </div>
 
 <script>
-  $.ajax({
-    url: 'shortcutkeys.html',
-    dataType: 'html',
-    method: 'GET',
-    success: function(data) {
+	
+  $.ajax({url: "shortcutkeys.html", success: function(result){
+      $("#Shortcutkeys").html(result);
+    }});
+	
+ // $.ajax({
+ //   url: 'shortcutkeys.html',
+ //   dataType: 'html',
+//    method: 'GET',
+//    success: function(data) {
         // Find the specific element in the loaded HTML content
-        var specificElement = $(data).find('.Services');
-        console.log("Your file loaded");
+  //      var specificElement = $(data).find('.Services');
+   //     console.log("Your file loaded");
         // Insert the specific element into another element on your page
-        $('#Shortcutkeys').html(specificElement);
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-        console.error('Error loading the file:', errorThrown);
-    }
-});
+ //       $('#Shortcutkeys').html(specificElement);
+//    },
+//    error: function(jqXHR, textStatus, errorThrown) {
+  //      console.error('Error loading the file:', errorThrown);
+ //   }
+//});
 
   //    $("#Shortcutkeys").load("shortcutkeys.html", function() {
   //   // Callback function after loading file1.txt
