@@ -223,6 +223,7 @@ body {
   $.ajax({
     url: 'MyPrayerMYHappyLIfe/shortcutkeys.html',
     dataType: 'html',
+	  methods: 'GET',
     success: function(data) {
         // Find the specific element in the loaded HTML content
         var specificElement = $(data).find('.Services');
