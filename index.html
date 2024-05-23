@@ -220,12 +220,27 @@ body {
 </div>
 
 <script>
-     $("#Shortcutkeys").load("shortcutkeys.html", function() {
-    // Callback function after loading file1.txt
-    // $("#div1").load("Services.html", function() {
-    //   // Callback function after loading file2.txt (optional)
-   console.log("Both files loaded!");
-    });
+  $.ajax({
+    url: 'shortcutkeys.html',
+    dataType: 'html',
+    success: function(data) {
+        // Find the specific element in the loaded HTML content
+        var specificElement = $(data).find('#setup');
+        console.log("Your file loaded");
+        // Insert the specific element into another element on your page
+        $('#Shortcutkeys').html(specificElement);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Error loading the file:', errorThrown);
+    }
+});
+
+  //    $("#Shortcutkeys").load("shortcutkeys.html", function() {
+  //   // Callback function after loading file1.txt
+  //   // $("#div1").load("Services.html", function() {
+  //   //   // Callback function after loading file2.txt (optional)
+  //  console.log("Both files loaded!");
+  //   });
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'))
           var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
