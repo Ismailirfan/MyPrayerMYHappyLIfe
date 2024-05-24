@@ -1,5 +1,12 @@
 <!-- The Modal with button-->
+    <div id="Automatic" class="w3-container menu w3-padding-48 w3-card">
+      Do you like to accept our automatic services
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" >Accept</button>
+      <button type="button" class="btn btn-danger" data-bs-target="#Manual" onclick="openMenu(event, 'Manual');">
+	     <div class="w3-col s6 tablink">Reject</div>
+      </button>
+    </div>  
+
 
 <!-- The Modal -->
 <div class="modal" id="myModal">
