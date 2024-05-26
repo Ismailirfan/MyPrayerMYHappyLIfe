@@ -6,7 +6,7 @@ $.ajax({url: "shortcutkeys.html", success: function(result){
       $("#Shortcutkeys").html(result);
     }});	
 
- $.ajax({url: "service.html", success: function(result){
+ $.ajax({url: "Service.html", success: function(result){
       $("#service").html(result);
     }});	
  
