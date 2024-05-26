@@ -6,11 +6,15 @@ $.ajax({url: "shortcutkeys.html", success: function(result){
       $("#Shortcutkeys").html(result);
     }});	
 
+ $.ajax({url: "service.html", success: function(result){
+      $("#service").html(result);
+    }});	
+ 
   // Tabbed Menu
 
 
  
-      const API_KEY = 'AIzaSyAAVEyh_nSUsyhpZq-N1oeb1qGNanbz_Kc';
+     /* const API_KEY = 'AIzaSyAAVEyh_nSUsyhpZq-N1oeb1qGNanbz_Kc';
       const FOLDER_ID = '1_iCnZEDJpQEK524YzL3v8RWUtM9sDqge'; // Replace with your public Google Drive folder ID
 
       listFiles(); // Automatically fetch files when the page loads
@@ -43,5 +47,5 @@ $.ajax({url: "shortcutkeys.html", success: function(result){
             console.error('Error:', error);
           }
         });
-      }
+      }*/
     });
